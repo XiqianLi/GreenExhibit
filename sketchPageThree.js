@@ -37,16 +37,16 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
   // back carmera
-  // var constraints = {
-  //   audio: false,
-  //   video: {
-  //     facingMode: {
-  //       exact: "environment"
-  //     }
-  //   }  
+  var constraints = {
+    audio: false,
+    video: {
+      facingMode: {
+        exact: "environment"
+      }
+    }  
+  }
 
-
-  capture = createCapture(VIDEO);
+  capture = createCapture(constraints);
   capture.size(windowWidth, windowHeight);
   //capture.hide();
 
@@ -124,7 +124,7 @@ function draw() {
     imgFrameThree.size(120,160);
 
 
-    imgFrameOne.mouseClicked(frameNow);
+    imgFrameOne.mousePressed(frameNow);
     // imgFrameTwo.mousePressed(frameNow);
     // imgFrameThree.mousePressed(frameNow);
 
@@ -139,7 +139,7 @@ function draw() {
 
   }
   // click next
-  nextButton.mouseClicked(switchFrame);
+  nextButton.mousePressed(switchFrame);
 
 
 }
