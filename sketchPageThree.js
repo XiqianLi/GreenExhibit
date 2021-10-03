@@ -2,6 +2,8 @@ let capture;
 var imgBox, imgHome, imgPic;
 var picOne, picTwo, picThree;
 var arrowLeft, arrowRight;
+var imgX, imgY
+var active = false;
 
 function preload() {
   imgBox = loadImage('img/box.svg');
@@ -17,10 +19,23 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+
+  // back carmera
+  // var constraints = {
+  //   audio: false,
+  //   video: {
+  //     facingMode: {
+  //       exact: "environment"
+  //     }
+  //   }  
+
+
   capture = createCapture(VIDEO);
   capture.size(windowWidth, windowHeight);
   //capture.hide();
 
+  imgX = windowWidth * 1/2 - 40;
+  imgY = windowHeight-400;
 
   
 }
@@ -37,7 +52,7 @@ function draw() {
   // arrow-left-circle
 
   image(imgPicOne,160,windowHeight-400,120,160);
-  image(imgPicTwo,windowWidth * 1/2 - 40,windowHeight-400,120,160);
+  image(imgPicTwo,imgX,imgY,120,160);
   image(imgPicThree,windowWidth -120 -160,windowHeight-400,120,160);
   image(imgArrowLeft,50,windowHeight-380,100,100);
   image(imgArrowRight,windowWidth-50-80,windowHeight-380,100,100);
@@ -49,8 +64,23 @@ function draw() {
   image(imgHome,50,windowHeight-150,80,80);
   image(imgPic,windowWidth * 1/2 - 40,windowHeight-150,80,80);
   image(imgBox,windowWidth-50-80,windowHeight-150,80,80);
+
+
 }
 
 function mousePressed() {
-  
+  if (mouseX>imgX && mouseX<imgX+120 && mouseY>imgY && mouseY<imgY+160) {
+    active = true;
+  } else {
+    active = false
+  }
+}
+
+function mouseDragged() {
+  image(capture, 0, 0, windowWidth, windowHeight);
+  if (active) {
+    imgX = mouseX;
+    imgY = mouseY;
+  }
+  image(imgPicTwo,imgX,imgY,120,180);
 }
