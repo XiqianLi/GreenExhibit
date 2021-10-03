@@ -36,6 +36,9 @@ function setup() {
     image(imgPic,windowWidth * 1/2 - 40,windowHeight-150,80,80);
     image(imgBox,windowWidth-50-80,windowHeight-150,80,80);
 
+
+
+
 }
 
 function draw() {
