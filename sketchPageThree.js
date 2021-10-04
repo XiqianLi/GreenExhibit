@@ -6,12 +6,15 @@ var arrowLeft, arrowRight;
 var imgX, imgY
 var active = false;
 var switchStatus = false;
-var nextButton,cancelButton;
+var popUpActive = false;
+var saveButton,cancelButton,resetButton;
+var goHistoryButton, backToDesignButton;
 var imgFrameOneX,imgFrameOneY,imgFrameOneX,imgFrameOneY;
 var frameOne;
 var col;
 var offset,ratio;
 var constraints;
+
 
 
 // var img;
@@ -32,6 +35,8 @@ function preload() {
 
   imgArrowLeft = loadImage('img/arrow-left-circle.svg');
   imgArrowRight = loadImage('img/arrow-right-circle.svg');
+
+  myFont = loadFont('font/Sniglet-Regular.ttf');
 
 
 }
@@ -119,11 +124,17 @@ function setup() {
 function draw() {
   background(255);
   image(capture, 0, 0, windowWidth, windowHeight);
+  textFont(myFont);
 
   saveButton = createButton('SAVE');
   saveButton.size(200,100);
   saveButton.style('font-size','36px','background-color',col);
   saveButton.position(windowWidth - saveButton.width - 100, windowHeight * 1/30);
+
+  resetButton = createButton('RESET');
+  resetButton.size(200,100);
+  resetButton.style('font-size','36px','background-color',col);
+  resetButton.position(windowWidth *1/2 - 100, windowHeight * 1/30);
 
   cancelButton = createButton('CANCEL');
   cancelButton.size(200,100);
@@ -194,26 +205,64 @@ function draw() {
     imgFrameOne.hide();
     imgFrameTwo.hide();
     imgFrameThree.hide();
-
   }
+
+
 
 
   // click next
   saveButton.mousePressed(takesnap);
+  frameButton.mousePressed(switchFrame);
+  cancelButton.mousePressed(openLinkTwo);
+  resetButton.mousePressed(reset);
+  saveButton.mousePressed(popUp);
 
-  frameButton.mousePressed(switchFrame)
+  if(popUpActive) {
+    imgFrameOne.hide();
+    imgFrameTwo.hide();
+    imgFrameThree.hide();
+
+    fill(255);
+    rect(windowWidth * 1/2 - 400,600,800,800)
+    fill(0);
+    textSize(64);
+    text("Successfully Saved",windowWidth * 1/2 - 300,800)
 
 
+    // fill(150);
+    // textSize(36);
+    // text("BACK TO DESIGN",windowWidth * 1/2 - 300,1300)
+    
+    fill(0);
 
+    backToDesignButton = createButton('BACK TO DESIGN');
+    backToDesignButton.size(400,100);
+    backToDesignButton.style('font-size','36px','background-color',col);
+    backToDesignButton.position(windowWidth *1/2 -400, 1200);
 
-
-
-
+    goHistoryButton = createButton('GO TO HISTORY');
+    goHistoryButton.size(400,100);
+    goHistoryButton.style('font-size','36px','background-color',col);
+    goHistoryButton.position(windowWidth *1/2 , 1200);
+    goHistoryButton.mousePressed(openLinkHistory);
+    // text("GO TO HISTORY")
+  }
 
 }
 
+function reset() {
+  window.open("indexPageThree.html","_self")
+}
+function openLinkTwo() {
+  window.open("indexPageTwo.html","_self")
+}
+
+function openLinkHistory() {
+  window.open('indexPageHistory.html','_self')
+}
+
 function takesnap() {
-  image(constraints,0,0);
+  image(capture,0,0);
 }
 
 // drag img
@@ -300,6 +349,12 @@ function frameThreeNow() {
   frameTwo.locY = windowHeight-450;
   frameTwo.w = 120;
   frameTwo.h = 180;
+}
+
+function popUp() {
+  popUpActive = true;
+  console.log("test")
+
 }
 
 
