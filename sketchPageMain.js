@@ -30,7 +30,13 @@ function setup() {
     // main navi
     designButton.size(600,320)
     designButton.position(windowWidth * 1/2 - designButton.width / 2, windowHeight * 1/3 - designButton.height)
-    designButton.mousePressed(openLinkDesign)
+    designButton.mousePressed(openLinkDesign);
+
+
+
+
+
+    
 
     historyButton.size(600,320)
     historyButton.position(windowWidth * 1/2 - historyButton.width / 2, windowHeight * 3/5 - historyButton.height)

@@ -1,5 +1,5 @@
 var imgPicOne, imgPicTwo;
-var backButton;
+var backButton,popBackButton;
 var homeButton,artButton,frameButton;
 
 
@@ -9,14 +9,21 @@ function preload() {
 
 function setup() {
     createCanvas(windowWidth,windowHeight);
-    background(240);
+    background(255,245,235);
 
-    homeButton = createImg('img/home.png','home');
+    homeButton = createImg('img/homeActive.png','home');
     artButton = createImg('img/art.png','home');
     frameButton = createImg('img/frame.png','home');
 
+    backButton = createButton('BACK');
+    backButton.size(200,100);
+    backButton.style('font-size','36px');
+    backButton.style('background-color','#83c5be');
+    backButton.position(50, 50);
+    backButton.mousePressed(openLinkTwo)
 
-    fill(250);
+
+    fill(131,197,190);
     noStroke();
     rect(0,0,windowWidth,200);
 
@@ -45,6 +52,8 @@ function setup() {
     text('Artwork Archieve No.123456',400,550);
     text('Frame: Oak, Wood Frame',400,600);
     text('Frame Archieve No.654321',400,650);
+
+
 
 
     // bottom navi
@@ -95,15 +104,16 @@ function openImage() {
     // artButton.hide();
     // frameButton.hide();
     
-    backButton = createButton('BACK');
-    backButton.size(200,100);
-    backButton.style('font-size','36px');
-    backButton.position(100, windowHeight * 1/30);
-    backButton.mousePressed(closeImage)
+    popBackButton = createButton('BACK');
+    popBackButton.size(200,100);
+    popBackButton.style('font-size','36px');
+    popBackButton.position(100, windowHeight * 1/30);
+    popBackButton.mousePressed(closeImage)
 }
 
 function closeImage() {
     imgPicTwo.hide();
+    popBackButton.hide();
 
     // imgPicOne.show();
     // homeButton.show();

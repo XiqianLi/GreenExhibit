@@ -16,8 +16,6 @@ var offset,ratio;
 var constraints;
 var saveImage;
 
-
-
 // var img;
 
 
@@ -36,8 +34,8 @@ function preload() {
   imgPicTwo = loadImage('img/picTwo.png');
   imgPicThree = loadImage('img/picThree.png');
 
-  imgArrowLeft = loadImage('img/arrow-left-circle.svg');
-  imgArrowRight = loadImage('img/arrow-right-circle.svg');
+  imgArrowLeft = loadImage('img/arrow-left-circle.png');
+  imgArrowRight = loadImage('img/arrow-right-circle.png');
 
   myFont = loadFont('font/Sniglet-Regular.ttf');
 
@@ -73,7 +71,6 @@ function setup() {
   artButton = createImg('img/artButton.png','artButton');
   frameButton = createImg('img/frameButton.png','frameButton');
   // moreButton = createImg('img/moreButton.png','moreButton');
-
 
 
   frameOne = {
@@ -266,9 +263,9 @@ function openLinkHistory() {
   window.open('indexPageHistory.html','_self')
 }
 
-function takesnap() {
-  image(capture,0,0);
-}
+// function takesnap() {
+//   image(capture,0,0);
+// }
 
 // drag img
 function mouseClicked() {
@@ -358,8 +355,6 @@ function frameThreeNow() {
 
 function popUp() {
   popUpActive = true;
-  console.log("test")
-
 }
 
 
