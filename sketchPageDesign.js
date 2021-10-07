@@ -16,6 +16,8 @@ var offset,ratio;
 var constraints;
 var saveImage;
 
+
+
 // var img;
 
 
@@ -24,9 +26,6 @@ var imgFrameOne,imgFrameTwo,imgFrameThree;
 
 
 function preload() {
-  // imgBox = loadImage('img/box.svg');
-  // imgHome = loadImage('img/home.svg');
-  // imgPic = loadImage('img/image.svg');
 
   imgSave = loadImage('img/save.png');
 
@@ -71,6 +70,7 @@ function setup() {
   artButton = createImg('img/artButton.png','artButton');
   frameButton = createImg('img/frameButton.png','frameButton');
   // moreButton = createImg('img/moreButton.png','moreButton');
+
 
 
   frameOne = {
@@ -211,7 +211,6 @@ function draw() {
 
 
   // click next
-  saveButton.mousePressed(takesnap);
   frameButton.mousePressed(switchFrame);
   cancelButton.mousePressed(openLinkTwo);
   resetButton.mousePressed(reset);
@@ -263,9 +262,6 @@ function openLinkHistory() {
   window.open('indexPageHistory.html','_self')
 }
 
-// function takesnap() {
-//   image(capture,0,0);
-// }
 
 // drag img
 function mouseClicked() {
@@ -355,6 +351,8 @@ function frameThreeNow() {
 
 function popUp() {
   popUpActive = true;
+  console.log("test")
+
 }
 
 
