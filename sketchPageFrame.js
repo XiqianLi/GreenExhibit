@@ -6,14 +6,14 @@ function preload() {
 
 function setup() {
     createCanvas(windowWidth,windowHeight);
-    background(240);
+    background(255,245,235);
 
     homeButton = createImg('img/home.png','home');
     artButton = createImg('img/art.png','home');
     frameButton = createImg('img/frameActive.png','home');
 
 
-    fill(250);
+    fill(131,197,190);
     noStroke();
     rect(0,0,windowWidth,200);
 
@@ -22,39 +22,39 @@ function setup() {
     
     text('Frames and Displays', windowWidth * 1/2 -280, 120);
 
-    image(imgFrameOne,50,windowHeight*1/2-800,240,360);
+    image(imgFrameOne,50,300,240,360);
     
     textSize(48);
-    text('Classic Mental Frame',400,windowHeight*1/2-750);
+    text('Classic Mental Frame',400,350);
     textSize(32);
-    text('Amount: 15',400,windowHeight*1/2-680);
-    text('Dimensions: 2′ 2″ x 1′ 9″',400,windowHeight*1/2-630);
-    text('Materials: Metal, Aluminum',400,windowHeight*1/2-580);
-    text('Style: Classic',400,windowHeight*1/2-530);
-    text('Archieve No.7654321',400,windowHeight*1/2-480);
+    text('Amount: 15',400,400);
+    text('Dimensions: 2′ 2″ x 1′ 9″',400,450);
+    text('Materials: Metal, Aluminum',400,500);
+    text('Style: Classic',400,550);
+    text('Archieve No.7654321',400,600);
 
 
 
     
-    image(imgFrameTwo,50,windowHeight*1/2-400,240,360);
+    image(imgFrameTwo,50,750,240,360);
     textSize(48);
-    text('Wood Frame',400,windowHeight*1/2-350);
+    text('Wood Frame',400,800);
     textSize(32);
-    text('Amount: 20',400,windowHeight*1/2-280);
-    text('Dimensions: 1′ 9″ x 1′ 3″',400,windowHeight*1/2-230);
-    text('Materials:  Wood, Oak',400,windowHeight*1/2-180);
-    text('Style: Traditional, Casual',400,windowHeight*1/2-130);
-    text('Archieve No.7654321',400,windowHeight*1/2-80);
+    text('Amount: 20',400,850);
+    text('Dimensions: 1′ 9″ x 1′ 3″',400,900);
+    text('Materials:  Wood, Oak',400,950);
+    text('Style: Traditional, Casual',400,1000);
+    text('Archieve No.7654321',400,1050);
 
-    image(imgFrameThree,50,windowHeight*1/2,240,360);
+    image(imgFrameThree,50,1200,240,360);
     textSize(48);
-    text('Girl with a Pearl Earring ',400,windowHeight*1/2-350+400);
+    text('Wood Frame',400,1250);
     textSize(32);
-    text('Amount: 3',400,windowHeight*1/2-280+400);
-    text('Dimensions: 1′ 6″ x 1′ 3″',400,windowHeight*1/2-230+400);
-    text('Materials: 1665',400,windowHeight*1/2-180+400);
-    text('Style: Traditional, Casual',400,windowHeight*1/2-130+400);
-    text('Archieve No.7654321',400,windowHeight*1/2-80+400);
+    text('Amount: 3',400,1300);
+    text('Dimensions: 1′ 6″ x 1′ 3″',400,1350);
+    text('Materials: pine',400,1400);
+    text('Style: Traditional, Casual',400,1450);
+    text('Archieve No.7654321',400,1500);
 
 
     
@@ -101,5 +101,5 @@ function openLinkHistory() {
   }
 
 function openLinkTwo() {
-    window.open("indexPageTwo.html","_self")
+    window.open("indexPageMain.html","_self")
 }

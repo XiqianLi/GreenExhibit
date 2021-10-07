@@ -9,7 +9,7 @@ function preload() {
 
 function setup() {
     createCanvas(windowWidth,windowHeight);
-    background(254,250,224);
+    background(255,245,235);
 
     image(imgLogo,windowWidth * 1/2 - 200,windowHeight * 1/7,400,400)
 
@@ -24,18 +24,18 @@ function setup() {
   inputun = createInput('xiqianli@gmail.com','text');
   inputun.size(600,100);
   inputun.style('font-size','48px','text-color','grey');
-  inputun.position(windowWidth * 1/2 - inputun.width / 2, windowHeight * 1/4 - inputun.height / 2 + 350);
+  inputun.position(windowWidth * 1/2 - inputun.width / 2, 850);
   textSize(48);
-  text("Enter username:",windowWidth * 1/2 - inputun.width / 2, windowHeight * 1/4 - inputun.height / 2 + 320);
+  text("Enter username:",windowWidth * 1/2 - inputun.width / 2, 820);
 
 
     //input password
     inputpass = createInput('','password');
     inputpass.size(600,100);
     inputpass.style('font-size','48px');
-    inputpass.position(windowWidth * 1/2 - inputpass.width / 2, windowHeight * 1/2 - inputpass.height / 2+50);
+    inputpass.position(windowWidth * 1/2 - inputpass.width / 2, 1100);
     textSize(48);
-    text("Enter password:",windowWidth * 1/2 - inputpass.width / 2, windowHeight * 1/2 - inputpass.height / 2+20);
+    text("Enter password:",windowWidth * 1/2 - inputpass.width / 2, 1070);
 
       //login button
 
@@ -43,10 +43,10 @@ function setup() {
 
     let col = color(131,197,190); 
   loginButton = createButton('Sign In');
-  loginButton.size(300,100);
+  loginButton.size(600,100);
   loginButton.style('font-size','48px',);
   loginButton.style('background-color',col);
-  loginButton.position(windowWidth * 1/2 - loginButton.width / 2, windowHeight * 3/4 - loginButton.height / 2 - 300);
+  loginButton.position(windowWidth * 1/2 - loginButton.width / 2, 1300);
   loginButton.mousePressed(openLink);
 }
 

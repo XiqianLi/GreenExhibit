@@ -1,6 +1,7 @@
 var designButton;
 var historyButton;
 var imgBox, imgHome, imgPic
+var sideNav, menuButton;
 
 function preload() {
     // imgBox = loadImage('img/box.svg');
@@ -17,6 +18,7 @@ function setup() {
       // img = createImg('img/test.png','testImag');
     designButton = createImg('img/designButton2.png','designButton');
     historyButton = createImg('img/historyButton2.png','historyButton');
+    menuButton = createImg('img/menu.png','menu');
     // imgFrameThree = createImg('img/picFrameThree.png','imgFrameThree');
 
     homeButton = createImg('img/homeActive.png','home');
@@ -34,6 +36,10 @@ function setup() {
     historyButton.position(windowWidth * 1/2 - historyButton.width / 2, windowHeight * 3/5 - historyButton.height)
     historyButton.mousePressed(openLinkHistory)
 
+    menuButton.size(80,80);
+    menuButton.position(50,50);
+
+    sideNav = createImg('Img/sideNav.png','sideNav')
 
     // bottom navi
 
@@ -51,6 +57,7 @@ function setup() {
     frameButton.size(100,100);
     frameButton.position(windowWidth-100-80,windowHeight-150);
     frameButton.mousePressed(openLinkFrame);
+
 
 
 
@@ -80,6 +87,11 @@ function openLinkDesign() {
   }
 
 
+  // function mousePressed() {
+  //   sideNav.size(750,windowHeight);
+  //   sideNav.position(0,0);
+  //   console.log('test');
+  // }
 
 
       // designButton = createButton('DESIGN');

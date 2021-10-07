@@ -27,7 +27,7 @@ function setup() {
 
     imgPicOne = createImg('img/mockPre.png','mockPre');
     imgPicOne.size(240,360);
-    imgPicOne.position(50,windowHeight*1/2-800);
+    imgPicOne.position(50,300);
     imgPicOne.mousePressed(openImage)
 
     imgPicTwo = createImg('img/mockGallery.png','mockGaller');
@@ -37,14 +37,14 @@ function setup() {
 
     
     textSize(48);
-    text('10/07/2021',400,windowHeight*1/2-750);
+    text('10/07/2021',400,350);
     textSize(32);
-    text('Location: , VBT 125, CSU East Bay ',400,windowHeight*1/2-680);
-    text('Wall No: 18',400,windowHeight*1/2-630);
-    text('Artwork Name: Lady with an Ermin',400,windowHeight*1/2-580);
-    text('Artwork Archieve No.123456',400,windowHeight*1/2-480);
-    text('Frame: Oak, Wood Frame',400,windowHeight*1/2-530);
-    text('Frame Archieve No.654321',400,windowHeight*1/2-430);
+    text('Location: , VBT 125, CSU East Bay ',400,400);
+    text('Wall No: 18',400,450);
+    text('Artwork Name: Lady with an Ermin',400,500);
+    text('Artwork Archieve No.123456',400,550);
+    text('Frame: Oak, Wood Frame',400,600);
+    text('Frame Archieve No.654321',400,650);
 
 
     // bottom navi
@@ -84,7 +84,7 @@ function openLinkHistory() {
   }
 
 function openLinkTwo() {
-    window.open("indexPageTwo.html","_self")
+    window.open("indexPageMain.html","_self")
 }
 
 

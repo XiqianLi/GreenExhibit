@@ -14,6 +14,7 @@ var frameOne;
 var col;
 var offset,ratio;
 var constraints;
+var saveImage;
 
 
 
@@ -25,9 +26,11 @@ var imgFrameOne,imgFrameTwo,imgFrameThree;
 
 
 function preload() {
-  imgBox = loadImage('img/box.svg');
-  imgHome = loadImage('img/home.svg');
-  imgPic = loadImage('img/image.svg');
+  // imgBox = loadImage('img/box.svg');
+  // imgHome = loadImage('img/home.svg');
+  // imgPic = loadImage('img/image.svg');
+
+  imgSave = loadImage('img/save.png');
 
   imgPicOne = loadImage('img/picOne.png');
   imgPicTwo = loadImage('img/picTwo.png');
@@ -69,7 +72,7 @@ function setup() {
 
   artButton = createImg('img/artButton.png','artButton');
   frameButton = createImg('img/frameButton.png','frameButton');
-  moreButton = createImg('img/moreButton.png','moreButton');
+  // moreButton = createImg('img/moreButton.png','moreButton');
 
 
 
@@ -167,14 +170,14 @@ function draw() {
 
 
   // three buttons
-  artButton.size(300,150);
-  artButton.position(50,windowHeight-180);
+  artButton.size(450,150);
+  artButton.position(10,windowHeight-180);
 
-  frameButton.size(300,150);
-  frameButton.position(windowWidth * 1/2 - 150,windowHeight-180);
+  frameButton.size(450,150);
+  frameButton.position(windowWidth * 1/2+10,windowHeight-180);
 
-  moreButton.size(300,150);
-  moreButton.position(windowWidth - 300 - 50,windowHeight-180);
+  // moreButton.size(300,150);
+  // moreButton.position(windowWidth - 300 - 50,windowHeight-180);
 
   if(switchStatus) {
 
@@ -226,7 +229,9 @@ function draw() {
     rect(windowWidth * 1/2 - 400,600,800,800)
     fill(0);
     textSize(64);
-    text("Successfully Saved",windowWidth * 1/2 - 300,800)
+    text("Successfully Saved",windowWidth * 1/2 - 300,750);
+    image(imgSave,windowWidth * 1/2 - 200,800,400,380);
+
 
 
     // fill(150);
@@ -251,10 +256,10 @@ function draw() {
 }
 
 function reset() {
-  window.open("indexPageThree.html","_self")
+  window.open("indexPageDesign.html","_self")
 }
 function openLinkTwo() {
-  window.open("indexPageTwo.html","_self")
+  window.open("indexPageMain.html","_self")
 }
 
 function openLinkHistory() {

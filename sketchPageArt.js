@@ -7,14 +7,14 @@ function preload() {
 
 function setup() {
     createCanvas(windowWidth,windowHeight);
-    background(240);
+    background(255,245,235);
 
     homeButton = createImg('img/home.png','home');
     artButton = createImg('img/artActive.png','home');
     frameButton = createImg('img/frame.png','home');
 
 
-    fill(250);
+    fill(131,197,190);
     noStroke();
     rect(0,0,windowWidth,200);
 
@@ -34,9 +34,6 @@ function setup() {
     text('Periods: Post-Impressionism',400,550);
     text('Archieve No.123456',400,600);
 
-
-
-    
     image(imgPicTwo,50,750,240,360);
     textSize(48);
     text('Lady with an Ermin',400,800);
@@ -104,5 +101,5 @@ function openLinkHistory() {
   }
 
 function openLinkTwo() {
-    window.open("indexPageTwo.html","_self")
+    window.open("indexPageMain.html","_self")
 }
