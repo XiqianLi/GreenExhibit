@@ -10,7 +10,7 @@ function setup() {
     background(240);
 
     homeButton = createImg('img/home.png','home');
-    artButton = createImg('img/art.png','home');
+    artButton = createImg('img/artActive.png','home');
     frameButton = createImg('img/frame.png','home');
 
 
@@ -23,39 +23,39 @@ function setup() {
     
     text('Artworks', windowWidth * 1/2 -160, 120);
 
-    image(imgPicOne,50,windowHeight*1/2-800,240,360);
+    image(imgPicOne,50,300,240,360);
     
     textSize(48);
-    text('Van Gogh self-portrait',400,windowHeight*1/2-750);
+    text('Van Gogh self-portrait',400,350);
     textSize(32);
-    text('Artist: Vincent van Gogh',400,windowHeight*1/2-680);
-    text('Dimensions: 2′ 2″ x 1′ 9″',400,windowHeight*1/2-630);
-    text('Created: September 1889',400,windowHeight*1/2-580);
-    text('Periods: Post-Impressionism',400,windowHeight*1/2-530);
-    text('Archieve No.123456',400,windowHeight*1/2-480);
+    text('Artist: Vincent van Gogh',400,400);
+    text('Dimensions: 2′ 2″ x 1′ 9″',400,450);
+    text('Created: September 1889',400,500);
+    text('Periods: Post-Impressionism',400,550);
+    text('Archieve No.123456',400,600);
 
 
 
     
-    image(imgPicTwo,50,windowHeight*1/2-400,240,360);
+    image(imgPicTwo,50,750,240,360);
     textSize(48);
-    text('Lady with an Ermin',400,windowHeight*1/2-350);
+    text('Lady with an Ermin',400,800);
     textSize(32);
-    text('Artist: Leonardo da Vinci',400,windowHeight*1/2-280);
-    text('Dimensions: 1′ 9″ x 1′ 3″',400,windowHeight*1/2-230);
-    text('Created:  1489',400,windowHeight*1/2-180);
-    text('Periods: High Renaissance',400,windowHeight*1/2-130);
-    text('Archieve No.123456',400,windowHeight*1/2-80);
+    text('Artist: Leonardo da Vinci',400,850);
+    text('Dimensions: 1′ 9″ x 1′ 3″',400,900);
+    text('Created:  1489',400,950);
+    text('Periods: High Renaissance',400,1000);
+    text('Archieve No.123456',400,1050);
 
-    image(imgPicThree,50,windowHeight*1/2,240,360);
+    image(imgPicThree,50,1200,240,360);
     textSize(48);
-    text('Girl with a Pearl Earring ',400,windowHeight*1/2-350+400);
+    text('Girl with a Pearl Earring ',400,1250);
     textSize(32);
-    text('Artist: Johannes Vermeer',400,windowHeight*1/2-280+400);
-    text('Dimensions: 1′ 6″ x 1′ 3″',400,windowHeight*1/2-230+400);
-    text('Created: 1665',400,windowHeight*1/2-180+400);
-    text('Periods: Dutch Golden Age',400,windowHeight*1/2-130+400);
-    text('Archieve No.123456',400,windowHeight*1/2-80+400);
+    text('Artist: Johannes Vermeer',400,1300);
+    text('Dimensions: 1′ 6″ x 1′ 3″',400,1350);
+    text('Created: 1665',400,1400);
+    text('Periods: Dutch Golden Age',400,1450);
+    text('Archieve No.123456',400,1500);
 
 
     // image(imgPicOne,50,windowHeight*1/2+400,240,360);

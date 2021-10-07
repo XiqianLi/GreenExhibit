@@ -12,33 +12,18 @@ function preload() {
 
 function setup() {
     createCanvas(windowWidth,windowHeight);
-    background(66, 245, 218);
+    background(131,197,190);
 
       // img = createImg('img/test.png','testImag');
     designButton = createImg('img/designButton2.png','designButton');
     historyButton = createImg('img/historyButton2.png','historyButton');
     // imgFrameThree = createImg('img/picFrameThree.png','imgFrameThree');
 
-    homeButton = createImg('img/home.png','home');
+    homeButton = createImg('img/homeActive.png','home');
     artButton = createImg('img/art.png','home');
     frameButton = createImg('img/frame.png','home');
 
 
-
-
-    // designButton = createButton('DESIGN');
-    // designButton.size(600,200);
-    // designButton.style('font-size','48px','stroke','red','text-color','grey');
-    // designButton.position(windowWidth * 1/2 - designButton.width / 2, windowHeight * 1/3 - designButton.height);
-    // designButton.mousePressed(openLinkDesign);
-
-
-
-    // historyButton = createButton('HISTORY');
-    // historyButton.size(600,200);
-    // historyButton.style('font-size','48px','stroke','red','text-color','grey');
-    // historyButton.position(windowWidth * 1/2 - historyButton.width / 2, windowHeight * 1/2 - historyButton.height);
-    // historyButton.mousePressed(openLinkHistory);
 
     // main navi
     designButton.size(600,320)
@@ -77,7 +62,7 @@ function draw() {
 
 
 function openLinkDesign() {
-    window.open("indexPageThree.html","_self")
+    window.open("indexPageDesign.html","_self")
   }
 
 
@@ -93,3 +78,20 @@ function openLinkDesign() {
   function openLinkFrame() {
     window.open("indexPageFrame.html","_self")
   }
+
+
+
+
+      // designButton = createButton('DESIGN');
+    // designButton.size(600,200);
+    // designButton.style('font-size','48px','stroke','red','text-color','grey');
+    // designButton.position(windowWidth * 1/2 - designButton.width / 2, windowHeight * 1/3 - designButton.height);
+    // designButton.mousePressed(openLinkDesign);
+
+
+
+    // historyButton = createButton('HISTORY');
+    // historyButton.size(600,200);
+    // historyButton.style('font-size','48px','stroke','red','text-color','grey');
+    // historyButton.position(windowWidth * 1/2 - historyButton.width / 2, windowHeight * 1/2 - historyButton.height);
+    // historyButton.mousePressed(openLinkHistory);

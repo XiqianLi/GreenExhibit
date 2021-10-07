@@ -10,7 +10,7 @@ function setup() {
 
     homeButton = createImg('img/home.png','home');
     artButton = createImg('img/art.png','home');
-    frameButton = createImg('img/frame.png','home');
+    frameButton = createImg('img/frameActive.png','home');
 
 
     fill(250);
