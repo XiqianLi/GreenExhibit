@@ -13,13 +13,6 @@ function setup() {
 
     image(imgLogo,windowWidth * 1/2 - 200,windowHeight * 1/7,400,400)
 
-    //input username
-    // usernameInput = createInput("Your username","text");
-    // usernameInput.size(600,100);
-    // usernameInput.position(windowWidth * 1/2 - usernameInput.width / 2, windowHeight * 1/4 - usernameInput.height / 2 + 300);
-    // text("Enter username:",windowWidth * 1/2 - usernameInput.width / 2, windowHeight * 1/4 - usernameInput.height / 2 + 200);
-
-
 
   inputun = createInput('xiqianli@gmail.com','text');
   inputun.size(600,100);

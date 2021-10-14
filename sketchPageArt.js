@@ -130,17 +130,6 @@ function popUp() {
   textSize(36);
   text("Enter Date of Creation:",windowWidth * 1/2 - inpuCreateDate.width / 2, 830);
 
-  // textSize(36);
-  // text("Select Material:",windowWidth * 1/2 - inpuFrameDimension.width / 2, 830);
-  // selDi = createSelect();
-  // selDi.position(windowWidth * 1/2 - inpuFrameDimension.width / 2, 850);
-  // selDi.style('font-size','36px','text-color','grey');
-  // selDi.size(300,80);
-  // selDi.option('Wood, Oak');
-  // selDi.option('Metal, Aluminum');
-  // selDi.option('Wood, Pine');
-  // selDi.selected('Wood, Cedar');
-
   text("Select Periods:",windowWidth * 1/2 - inpuCreateDate.width / 2, 1000);
   selDi = createSelect();
   selDi.position(windowWidth * 1/2 - inpuCreateDate.width / 2, 1020);
@@ -152,11 +141,11 @@ function popUp() {
   selDi.selected('Post-Impressionsim');
 
   let col = color(131,197,190); 
-  submitButton = createButton('Submit');
-  submitButton.size(300,100);
-  submitButton.style('font-size','48px',);
-  submitButton.style('background-color',col);
-  submitButton.position(windowWidth * 1/2 + 50, 1180);
+  picButton = createButton('Picture');
+  picButton.size(300,100);
+  picButton.style('font-size','48px',);
+  picButton.style('background-color',col);
+  picButton.position(windowWidth * 1/2 + 50, 1180);
 
   cancelButton = createButton('Cancel');
   cancelButton.size(300,100);

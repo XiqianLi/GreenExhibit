@@ -150,11 +150,11 @@ function popUp() {
   selDi.selected('Mondern');
 
   let col = color(131,197,190); 
-  submitButton = createButton('Submit');
-  submitButton.size(300,100);
-  submitButton.style('font-size','48px',);
-  submitButton.style('background-color',col);
-  submitButton.position(windowWidth * 1/2 + 50, 1180);
+  picButton = createButton('Picture');
+  picButton.size(300,100);
+  picButton.style('font-size','48px',);
+  picButton.style('background-color',col);
+  picButton.position(windowWidth * 1/2 + 50, 1180);
 
   cancelButton = createButton('Cancel');
   cancelButton.size(300,100);
