@@ -53,9 +53,6 @@ function setup() {
     text('Frame: Oak, Wood Frame',400,600);
     text('Frame Archieve No.654321',400,650);
 
-
-
-
     // bottom navi
 
     fill(255);
@@ -99,10 +96,6 @@ function openLinkTwo() {
 
 function openImage() {
     imgPicTwo.show();
-
-    // homeButton.hide();
-    // artButton.hide();
-    // frameButton.hide();
     
     popBackButton = createButton('BACK');
     popBackButton.size(200,100);
@@ -114,10 +107,5 @@ function openImage() {
 function closeImage() {
     imgPicTwo.hide();
     popBackButton.hide();
-
-    // imgPicOne.show();
-    // homeButton.show();
-    // artButton.show();
-    // frameButton.show();
 
 }

@@ -15,6 +15,7 @@ var col;
 var offset,ratio;
 var constraints;
 var saveImage;
+var backToDesignButton, goDisplayButton;
 
 // var img;
 var imgFrameOne,imgFrameTwo,imgFrameThree;
@@ -112,6 +113,10 @@ function setup() {
   saveButton = createButton('SAVE');
   resetButton = createButton('RESET');
   cancelButton = createButton('CANCEL');
+
+  backToDesignButton = createButton('Back to Design');
+  goDisplayButton = createButton('Go to Display');
+
 }
 
 function draw() {
@@ -210,24 +215,23 @@ function draw() {
     imgFrameThree.hide();
 
     fill(255);
-    rect(windowWidth * 1/2 - 400,600,800,800)
+    rect(windowWidth * 1/2 - 400,200,800,800)
     fill(0);
     textSize(64);
-    text("Successfully Saved",windowWidth * 1/2 - 300,750);
-    image(imgSave,windowWidth * 1/2 - 200,800,400,380);
+    text("Successfully Saved",windowWidth * 1/2 - 300,350);
+    image(imgSave,windowWidth * 1/2 - 200,400,400,380);
 
     
     fill(0);
 
-    backToDesignButton = createButton('Back to Design');
     backToDesignButton.size(400,100);
     backToDesignButton.style('font-size','36px','background-color',col);
-    backToDesignButton.position(windowWidth *1/2 -400, 1200);
+    backToDesignButton.position(windowWidth *1/2 -400, 800);
 
-    goDisplayButton = createButton('Go to Display');
+
     goDisplayButton.size(400,100);
     goDisplayButton.style('font-size','36px','background-color',col);
-    goDisplayButton.position(windowWidth *1/2 , 1200);
+    goDisplayButton.position(windowWidth *1/2 , 800);
     goDisplayButton.touchStarted(openLinkDisplay);
   }
 
