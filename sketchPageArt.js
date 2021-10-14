@@ -13,7 +13,7 @@ function setup() {
     homeButton = createImg('img/home.png','home');
     artButton = createImg('img/artActive.png','home');
     frameButton = createImg('img/frame.png','home');
-    createButton = createImg('img/create.png','create');
+    createNew = createImg('img/create.png','create');
 
     // header
     fill(131,197,190);
@@ -73,8 +73,9 @@ function setup() {
     frameButton.mousePressed(openLinkFrame);
 
     // create button
-    createButton.size(200,200);
-    createButton.position(windowWidth * 1/2 - 100,windowHeight-450);
+    createNew.size(200,200);
+    createNew.position(windowWidth * 1/2 - 100,windowHeight-450);
+    createNew.mousePressed(popUp);
     
 }
 
@@ -98,4 +99,76 @@ function openLinkDisplay() {
 
 function openLinkTwo() {
     window.open("indexPageMain.html","_self")
+}
+
+function popUp() {
+  fill(255);
+  rect(windowWidth*1/2-400,200,800,1200);
+  fill(0);
+  textSize(48);
+  text("Inventory Artwork",windowWidth*1/2-200,300);
+
+
+  inpuArtworkType = createInput('','text');
+  inpuArtworkType.size(600,80);
+  inpuArtworkType.style('font-size','48px','text-color','grey');
+  inpuArtworkType.position(windowWidth * 1/2 - inpuArtworkType.width / 2, 450);
+  textSize(36);
+  text("Enter Artwork Type:",windowWidth * 1/2 - inpuArtworkType.width / 2, 430);
+
+  inpuArtworkDimension = createInput('','text');
+  inpuArtworkDimension.size(600,80);
+  inpuArtworkDimension.style('font-size','48px','text-color','grey');
+  inpuArtworkDimension.position(windowWidth * 1/2 - inpuArtworkDimension.width / 2, 650);
+  textSize(36);
+  text("Enter Artwork Dimension:",windowWidth * 1/2 - inpuArtworkDimension.width / 2, 630);
+
+  inpuCreateDate = createInput('','date');
+  inpuCreateDate.size(600,80);
+  inpuCreateDate.style('font-size','36px','text-color','grey');
+  inpuCreateDate.position(windowWidth * 1/2 - inpuCreateDate.width / 2, 850);
+  textSize(36);
+  text("Enter Date of Creation:",windowWidth * 1/2 - inpuCreateDate.width / 2, 830);
+
+  // textSize(36);
+  // text("Select Material:",windowWidth * 1/2 - inpuFrameDimension.width / 2, 830);
+  // selDi = createSelect();
+  // selDi.position(windowWidth * 1/2 - inpuFrameDimension.width / 2, 850);
+  // selDi.style('font-size','36px','text-color','grey');
+  // selDi.size(300,80);
+  // selDi.option('Wood, Oak');
+  // selDi.option('Metal, Aluminum');
+  // selDi.option('Wood, Pine');
+  // selDi.selected('Wood, Cedar');
+
+  text("Select Periods:",windowWidth * 1/2 - inpuCreateDate.width / 2, 1000);
+  selDi = createSelect();
+  selDi.position(windowWidth * 1/2 - inpuCreateDate.width / 2, 1020);
+  selDi.style('font-size','36px','text-color','grey');
+  selDi.size(300,80);
+  selDi.option('Impressionsim');
+  selDi.option('Dutch Golden Age');
+  selDi.option('High Renaissance');
+  selDi.selected('Post-Impressionsim');
+
+  let col = color(131,197,190); 
+  submitButton = createButton('Submit');
+  submitButton.size(300,100);
+  submitButton.style('font-size','48px',);
+  submitButton.style('background-color',col);
+  submitButton.position(windowWidth * 1/2 + 50, 1180);
+
+  cancelButton = createButton('Cancel');
+  cancelButton.size(300,100);
+  cancelButton.style('font-size','48px',);
+  cancelButton.style('background-color','#FFFFFF');
+  cancelButton.position(windowWidth * 1/2 - cancelButton.width - 50, 1180);
+  cancelButton.mousePressed(reset);
+
+  createNew.hide()
+
+}
+
+function reset() {
+  window.open("indexPageFrame.html","_self")
 }

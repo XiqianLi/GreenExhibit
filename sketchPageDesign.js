@@ -121,10 +121,9 @@ function draw() {
   image(capture, 0, 0, windowWidth, windowHeight);
 
   // top navi buttons
-
-  saveButton.size(200,170);
+  saveButton.size(200,100);
   saveButton.style('font-size','36px','background-color',col);
-  saveButton.position(windowWidth - saveButton.width - 100, 30);
+  saveButton.position(windowWidth - saveButton.width - 100, windowHeight * 1/30);
 
 
   resetButton.size(200,100);
@@ -229,7 +228,7 @@ function draw() {
     goDisplayButton.size(400,100);
     goDisplayButton.style('font-size','36px','background-color',col);
     goDisplayButton.position(windowWidth *1/2 , 1200);
-    goDisplayButton.mousePressed(openLinkDisplay);
+    goDisplayButton.touchStarted(openLinkDisplay);
   }
 
 }
