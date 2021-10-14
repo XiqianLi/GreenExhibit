@@ -139,7 +139,6 @@ function draw() {
   rect(0,0,windowWidth,200);
 
   // buttom nav
-
   fill(255);
   noStroke();
   rect(0,windowHeight-200,windowWidth,200);
@@ -203,7 +202,7 @@ function draw() {
   frameButton.mousePressed(switchFrame);
   cancelButton.mousePressed(openLinkTwo);
   resetButton.mousePressed(reset);
-  saveButton.mousePressed(popUp);
+  saveButton.mouseClicked(popUp);
 
   if(popUpActive) {
     imgFrameOne.hide();
