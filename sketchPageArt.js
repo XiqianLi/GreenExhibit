@@ -170,5 +170,5 @@ function popUp() {
 }
 
 function reset() {
-  window.open("indexPageFrame.html","_self")
+  window.open("indexPageArt.html","_self")
 }

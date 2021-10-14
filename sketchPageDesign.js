@@ -219,7 +219,7 @@ function draw() {
     fill(0);
     textSize(64);
     text("Successfully Saved",windowWidth * 1/2 - 300,450);
-    image(imgSave,windowWidth * 1/2 - 200,400,400,480);
+    image(imgSave,windowWidth * 1/2 - 200,480,400,400);
 
     
     fill(0);
