@@ -167,9 +167,6 @@ function draw() {
   frameButton.size(450,150);
   frameButton.position(windowWidth * 1/2+10,windowHeight-180);
 
-  // moreButton.size(300,150);
-  // moreButton.position(windowWidth - 300 - 50,windowHeight-180);
-
 // switch paintings to frames
   if(switchStatus) {
     imgFrameOne.show();
@@ -203,9 +200,9 @@ function draw() {
 
 
   // click save
-  frameButton.mousePressed(switchFrame);
-  cancelButton.mousePressed(openLinkTwo);
-  resetButton.mousePressed(reset);
+  frameButton.touchStarted(switchFrame);
+  cancelButton.touchStarted(openLinkTwo);
+  resetButton.touchStarted(reset);
   saveButton.touchStarted(popUp);
 
   if(popUpActive) {

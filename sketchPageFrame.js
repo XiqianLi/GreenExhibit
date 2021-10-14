@@ -107,31 +107,31 @@ function reset() {
 
 function popUp() {
   fill(255);
-  rect(windowWidth*1/2-400,windowHeight*1/2-500,800,1100);
+  rect(windowWidth*1/2-400,200,800,1200);
   fill(0);
   textSize(48);
-  text("Inventory Frame",windowWidth*1/2-200,windowHeight*1/2-400);
+  text("Inventory Frame",windowWidth*1/2-200,300);
 
 
   inpuFrameType = createInput('','text');
   inpuFrameType.size(600,80);
   inpuFrameType.style('font-size','48px','text-color','grey');
-  inpuFrameType.position(windowWidth * 1/2 - inpuFrameType.width / 2, 750);
+  inpuFrameType.position(windowWidth * 1/2 - inpuFrameType.width / 2, 450);
   textSize(36);
-  text("Enter Frame Type:",windowWidth * 1/2 - inpuFrameType.width / 2, 730);
+  text("Enter Frame Type:",windowWidth * 1/2 - inpuFrameType.width / 2, 430);
 
   inpuFrameDimension = createInput('','text');
   inpuFrameDimension.size(600,80);
   inpuFrameDimension.style('font-size','48px','text-color','grey');
-  inpuFrameDimension.position(windowWidth * 1/2 - inpuFrameDimension.width / 2, 950);
+  inpuFrameDimension.position(windowWidth * 1/2 - inpuFrameDimension.width / 2, 650);
   textSize(36);
-  text("Enter Frame Dimension:",windowWidth * 1/2 - inpuFrameDimension.width / 2, 930);
+  text("Enter Frame Dimension:",windowWidth * 1/2 - inpuFrameDimension.width / 2, 630);
 
 
   textSize(36);
-  text("Select Material:",windowWidth * 1/2 - inpuFrameDimension.width / 2, 1130);
+  text("Select Material:",windowWidth * 1/2 - inpuFrameDimension.width / 2, 830);
   selDi = createSelect();
-  selDi.position(windowWidth * 1/2 - inpuFrameDimension.width / 2, 1150);
+  selDi.position(windowWidth * 1/2 - inpuFrameDimension.width / 2, 850);
   selDi.style('font-size','36px','text-color','grey');
   selDi.size(300,80);
   selDi.option('Wood, Oak');
@@ -139,9 +139,9 @@ function popUp() {
   selDi.option('Wood, Pine');
   selDi.selected('Wood, Cedar');
 
-  text("Select Style:",windowWidth * 1/2 - inpuFrameDimension.width / 2, 1300);
+  text("Select Style:",windowWidth * 1/2 - inpuFrameDimension.width / 2, 1000);
   selDi = createSelect();
-  selDi.position(windowWidth * 1/2 - inpuFrameDimension.width / 2, 1320);
+  selDi.position(windowWidth * 1/2 - inpuFrameDimension.width / 2, 1020);
   selDi.style('font-size','36px','text-color','grey');
   selDi.size(300,80);
   selDi.option('Traditional');
@@ -154,13 +154,15 @@ function popUp() {
   submitButton.size(300,100);
   submitButton.style('font-size','48px',);
   submitButton.style('background-color',col);
-  submitButton.position(windowWidth * 1/2 + 50, 1480);
+  submitButton.position(windowWidth * 1/2 + 50, 1180);
 
   cancelButton = createButton('Cancel');
   cancelButton.size(300,100);
   cancelButton.style('font-size','48px',);
   cancelButton.style('background-color','#FFFFFF');
-  cancelButton.position(windowWidth * 1/2 - cancelButton.width - 50, 1480);
-  cancelButton.mousePressed(reset)
+  cancelButton.position(windowWidth * 1/2 - cancelButton.width - 50, 1180);
+  cancelButton.mousePressed(reset);
+
+  createNew.hide()
 
 }
