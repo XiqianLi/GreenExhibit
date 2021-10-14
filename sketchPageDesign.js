@@ -108,6 +108,10 @@ function setup() {
   col = color(255,255,255);
   offset = -30;
   ratio = 1.7;
+
+  saveButton = createButton('SAVE');
+  resetButton = createButton('RESET');
+  cancelButton = createButton('CANCEL');
 }
 
 function draw() {
@@ -117,17 +121,17 @@ function draw() {
   image(capture, 0, 0, windowWidth, windowHeight);
 
   // top navi buttons
-  saveButton = createButton('SAVE');
+
   saveButton.size(200,170);
   saveButton.style('font-size','36px','background-color',col);
   saveButton.position(windowWidth - saveButton.width - 100, 30);
 
-  resetButton = createButton('RESET');
+
   resetButton.size(200,100);
   resetButton.style('font-size','36px','background-color',col);
   resetButton.position(windowWidth *1/2 - 100, windowHeight * 1/30);
 
-  cancelButton = createButton('CANCEL');
+
   cancelButton.size(200,100);
   cancelButton.style('font-size','36px','background-color',col);
   cancelButton.position(100, windowHeight * 1/30);
