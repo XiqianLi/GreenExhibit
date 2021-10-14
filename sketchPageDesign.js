@@ -21,6 +21,8 @@ var backToDesignButton, goDisplayButton;
 var imgFrameOne,imgFrameTwo,imgFrameThree;
 
 
+
+
 function preload() {
 
   imgSave = loadImage('img/save.png');
@@ -30,6 +32,8 @@ function preload() {
 
   imgArrowLeft = loadImage('img/arrow-left-circle.png');
   imgArrowRight = loadImage('img/arrow-right-circle.png');
+
+
 }
 
 function setup() {
@@ -116,6 +120,10 @@ function setup() {
 
   backToDesignButton = createButton('Back to Design');
   goDisplayButton = createButton('Go to Display');
+
+  backToDesignButton.hide()
+  goDisplayButton.hide()
+
 
 }
 
@@ -213,6 +221,9 @@ function draw() {
     imgFrameOne.hide();
     imgFrameTwo.hide();
     imgFrameThree.hide();
+
+    backToDesignButton.show()
+    goDisplayButton.show()
 
     fill(255);
     rect(windowWidth * 1/2 - 400,300,800,800)
