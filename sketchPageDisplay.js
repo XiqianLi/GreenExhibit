@@ -46,7 +46,7 @@ function setup() {
     textSize(48);
     text('10/07/2021',400,350);
     textSize(32);
-    text('Location: , VBT 125, CSU East Bay ',400,400);
+    text('Location: VBT 125, CSU East Bay ',400,400);
     text('Wall No: 18',400,450);
     text('Artwork Name: Lady with an Ermin',400,500);
     text('Artwork Archieve No.123456',400,550);

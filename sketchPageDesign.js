@@ -215,23 +215,23 @@ function draw() {
     imgFrameThree.hide();
 
     fill(255);
-    rect(windowWidth * 1/2 - 400,200,800,800)
+    rect(windowWidth * 1/2 - 400,300,800,800)
     fill(0);
     textSize(64);
-    text("Successfully Saved",windowWidth * 1/2 - 300,350);
-    image(imgSave,windowWidth * 1/2 - 200,400,400,380);
+    text("Successfully Saved",windowWidth * 1/2 - 300,450);
+    image(imgSave,windowWidth * 1/2 - 200,400,400,480);
 
     
     fill(0);
 
     backToDesignButton.size(400,100);
     backToDesignButton.style('font-size','36px','background-color',col);
-    backToDesignButton.position(windowWidth *1/2 -400, 800);
+    backToDesignButton.position(windowWidth *1/2 -400, 900);
 
 
     goDisplayButton.size(400,100);
     goDisplayButton.style('font-size','36px','background-color',col);
-    goDisplayButton.position(windowWidth *1/2 , 800);
+    goDisplayButton.position(windowWidth *1/2 , 900);
     goDisplayButton.touchStarted(openLinkDisplay);
   }
 
