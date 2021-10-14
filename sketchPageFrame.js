@@ -8,11 +8,13 @@ function setup() {
     createCanvas(windowWidth,windowHeight);
     background(255,245,235);
 
+    // create bottom navi buttons
     homeButton = createImg('img/home.png','home');
     artButton = createImg('img/art.png','home');
     frameButton = createImg('img/frameActive.png','home');
+    createNew = createImg('img/create.png','create');
 
-
+    // create header
     fill(131,197,190);
     noStroke();
     rect(0,0,windowWidth,200);
@@ -20,10 +22,10 @@ function setup() {
     fill(0);
     textSize(64);
     
-    text('Frames and Displays', windowWidth * 1/2 -280, 120);
+    text('Frames', windowWidth * 1/2 -100, 120);
 
+    // draw frames
     image(imgFrameOne,50,300,240,360);
-    
     textSize(48);
     text('Classic Mental Frame',400,350);
     textSize(32);
@@ -32,9 +34,6 @@ function setup() {
     text('Materials: Metal, Aluminum',400,500);
     text('Style: Classic',400,550);
     text('Archieve No.7654321',400,600);
-
-
-
     
     image(imgFrameTwo,50,750,240,360);
     textSize(48);
@@ -52,17 +51,9 @@ function setup() {
     textSize(32);
     text('Amount: 3',400,1300);
     text('Dimensions: 1′ 6″ x 1′ 3″',400,1350);
-    text('Materials: pine',400,1400);
+    text('Materials: Wood, Pine',400,1400);
     text('Style: Traditional, Casual',400,1450);
     text('Archieve No.7654321',400,1500);
-
-
-    
-
-
-
-
-
 
     // bottom navi
 
@@ -81,14 +72,19 @@ function setup() {
     frameButton.size(100,100);
     frameButton.position(windowWidth-100-80,windowHeight-150);
     frameButton.mousePressed(openLinkFrame);
+
+    // create button
+    createNew.size(200,200);
+    createNew.position(windowWidth * 1/2 - 100,windowHeight-450);
+    createNew.mousePressed(popUp);
 }
 
 function draw() {
 
 }
 
-function openLinkHistory() {
-    window.open("indexPageHistory.html","_self")
+function openLinkDisplay() {
+    window.open("indexPageDisplay.html","_self")
   }
 
 
@@ -102,4 +98,69 @@ function openLinkHistory() {
 
 function openLinkTwo() {
     window.open("indexPageMain.html","_self")
+}
+
+function reset() {
+  window.open("indexPageFrame.html","_self")
+}
+
+
+function popUp() {
+  fill(255);
+  rect(windowWidth*1/2-400,windowHeight*1/2-500,800,1100);
+  fill(0);
+  textSize(48);
+  text("Inventory Frame",windowWidth*1/2-200,windowHeight*1/2-400);
+
+
+  inpuFrameType = createInput('','text');
+  inpuFrameType.size(600,80);
+  inpuFrameType.style('font-size','48px','text-color','grey');
+  inpuFrameType.position(windowWidth * 1/2 - inpuFrameType.width / 2, 750);
+  textSize(36);
+  text("Enter Frame Type:",windowWidth * 1/2 - inpuFrameType.width / 2, 730);
+
+  inpuFrameDimension = createInput('','text');
+  inpuFrameDimension.size(600,80);
+  inpuFrameDimension.style('font-size','48px','text-color','grey');
+  inpuFrameDimension.position(windowWidth * 1/2 - inpuFrameDimension.width / 2, 950);
+  textSize(36);
+  text("Enter Frame Dimension:",windowWidth * 1/2 - inpuFrameDimension.width / 2, 930);
+
+
+  textSize(36);
+  text("Select Material:",windowWidth * 1/2 - inpuFrameDimension.width / 2, 1130);
+  selDi = createSelect();
+  selDi.position(windowWidth * 1/2 - inpuFrameDimension.width / 2, 1150);
+  selDi.style('font-size','36px','text-color','grey');
+  selDi.size(300,80);
+  selDi.option('Wood, Oak');
+  selDi.option('Metal, Aluminum');
+  selDi.option('Wood, Pine');
+  selDi.selected('Wood, Cedar');
+
+  text("Select Style:",windowWidth * 1/2 - inpuFrameDimension.width / 2, 1300);
+  selDi = createSelect();
+  selDi.position(windowWidth * 1/2 - inpuFrameDimension.width / 2, 1320);
+  selDi.style('font-size','36px','text-color','grey');
+  selDi.size(300,80);
+  selDi.option('Traditional');
+  selDi.option('Casual');
+  selDi.option('Classic');
+  selDi.selected('Mondern');
+
+  let col = color(131,197,190); 
+  submitButton = createButton('Submit');
+  submitButton.size(300,100);
+  submitButton.style('font-size','48px',);
+  submitButton.style('background-color',col);
+  submitButton.position(windowWidth * 1/2 + 50, 1480);
+
+  cancelButton = createButton('Cancel');
+  cancelButton.size(300,100);
+  cancelButton.style('font-size','48px',);
+  cancelButton.style('background-color','#FFFFFF');
+  cancelButton.position(windowWidth * 1/2 - cancelButton.width - 50, 1480);
+  cancelButton.mousePressed(reset)
+
 }

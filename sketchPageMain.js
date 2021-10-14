@@ -1,5 +1,5 @@
 var designButton;
-var historyButton;
+var displayButton;
 var imgBox, imgHome, imgPic
 var sideNav, menuButton;
 
@@ -17,7 +17,7 @@ function setup() {
 
       // img = createImg('img/test.png','testImag');
     designButton = createImg('img/designButton2.png','designButton');
-    historyButton = createImg('img/historyButton2.png','historyButton');
+    displayButton = createImg('img/displayButton2.png','displayButton');
     menuButton = createImg('img/menu.png','menu');
     // imgFrameThree = createImg('img/picFrameThree.png','imgFrameThree');
 
@@ -38,9 +38,9 @@ function setup() {
 
     
 
-    historyButton.size(600,320)
-    historyButton.position(windowWidth * 1/2 - historyButton.width / 2, windowHeight * 3/5 - historyButton.height)
-    historyButton.mousePressed(openLinkHistory)
+    displayButton.size(600,320)
+    displayButton.position(windowWidth * 1/2 - displayButton.width / 2, windowHeight * 3/5 - displayButton.height)
+    displayButton.mousePressed(openLinkDisplay)
 
     menuButton.size(80,80);
     menuButton.position(50,50);
@@ -79,8 +79,8 @@ function openLinkDesign() {
   }
 
 
-  function openLinkHistory() {
-    window.open("indexPageHistory.html","_self")
+  function openLinkDisplay() {
+    window.open("indexPageDisplay.html","_self")
   }
 
 

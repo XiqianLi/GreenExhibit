@@ -9,22 +9,23 @@ function setup() {
     createCanvas(windowWidth,windowHeight);
     background(255,245,235);
 
+    // create bottom navi buttons
     homeButton = createImg('img/home.png','home');
     artButton = createImg('img/artActive.png','home');
     frameButton = createImg('img/frame.png','home');
+    createButton = createImg('img/create.png','create');
 
-
+    // header
     fill(131,197,190);
     noStroke();
     rect(0,0,windowWidth,200);
 
     fill(0);
     textSize(64);
-    
-    text('Artworks', windowWidth * 1/2 -160, 120);
+    text('Artworks', windowWidth * 1/2 -140, 120);
 
+    // artworks
     image(imgPicOne,50,300,240,360);
-    
     textSize(48);
     text('Van Gogh self-portrait',400,350);
     textSize(32);
@@ -54,18 +55,7 @@ function setup() {
     text('Periods: Dutch Golden Age',400,1450);
     text('Archieve No.123456',400,1500);
 
-
-    // image(imgPicOne,50,windowHeight*1/2+400,240,360);
-    // image(imgPicTwo,50,windowHeight*1/2+800,240,360);
-    
-
-
-
-
-
-
-    // bottom navi
-
+    // draw bottom navi
     fill(255);
     noStroke();
     rect(0,windowHeight-200,windowWidth,200);
@@ -81,14 +71,20 @@ function setup() {
     frameButton.size(100,100);
     frameButton.position(windowWidth-100-80,windowHeight-150);
     frameButton.mousePressed(openLinkFrame);
+
+    // create button
+    createButton.size(200,200);
+    createButton.position(windowWidth * 1/2 - 100,windowHeight-450);
+    
 }
 
+  
 function draw() {
-
 }
 
-function openLinkHistory() {
-    window.open("indexPageHistory.html","_self")
+// when I use .mousePressed() to call a function, it is hard to call a function with parameters, so I need to create them separately
+function openLinkDisplay() {
+    window.open("indexPageDisplay.html","_self")
   }
 
 

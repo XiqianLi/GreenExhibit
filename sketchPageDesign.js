@@ -8,7 +8,7 @@ var active = false;
 var switchStatus = false;
 var popUpActive = false;
 var saveButton,cancelButton,resetButton;
-var goHistoryButton, backToDesignButton;
+var goDisplayButton, backToDesignButton;
 var imgFrameOneX,imgFrameOneY,imgFrameOneX,imgFrameOneY;
 var frameOne;
 var col;
@@ -16,29 +16,19 @@ var offset,ratio;
 var constraints;
 var saveImage;
 
-
-
 // var img;
-
-
-
 var imgFrameOne,imgFrameTwo,imgFrameThree;
 
 
 function preload() {
 
   imgSave = loadImage('img/save.png');
-
   imgPicOne = loadImage('img/picOne.png');
   imgPicTwo = loadImage('img/picTwo.png');
   imgPicThree = loadImage('img/picThree.png');
 
   imgArrowLeft = loadImage('img/arrow-left-circle.png');
   imgArrowRight = loadImage('img/arrow-right-circle.png');
-
-  myFont = loadFont('font/Sniglet-Regular.ttf');
-
-
 }
 
 function setup() {
@@ -54,25 +44,23 @@ function setup() {
 
   capture = createCapture(constraints);
   capture.size(windowWidth, windowHeight);
-  //capture.hide();
 
+  // set X,Y,W,H of demo painting as variables
   imgX = windowWidth * 1/2 - 40;
   imgY = windowHeight-450;
-
   imgW = 120;
   imgH = 180;
 
-  // img = createImg('img/test.png','testImag');
+  //draw frames
   imgFrameOne = createImg('img/picFrameOne.png','imgFrameOne');
   imgFrameTwo = createImg('img/picFrameTwo.png','imgFrameTwo');
   imgFrameThree = createImg('img/picFrameThree.png','imgFrameThree');
 
+// bottom buttons
   artButton = createImg('img/artButton.png','artButton');
   frameButton = createImg('img/frameButton.png','frameButton');
-  // moreButton = createImg('img/moreButton.png','moreButton');
 
-
-
+// frames
   frameOne = {
     locX:'160',
     locY: windowHeight-450,
@@ -94,7 +82,7 @@ function setup() {
     h:'180'
   }
 
-// pic
+// paintings
   picOne = {
     locX:'160',
     locY: windowHeight-450,
@@ -116,20 +104,23 @@ function setup() {
     h:'180'
   }
 
+  // make sure paintings can fit in frames
   col = color(255,255,255);
   offset = -30;
   ratio = 1.7;
 }
 
 function draw() {
+
+  // based video streaming in draw function, everything placed on this area will be written in draw function
   background(255);
   image(capture, 0, 0, windowWidth, windowHeight);
-  textFont(myFont);
 
+  // top navi buttons
   saveButton = createButton('SAVE');
-  saveButton.size(200,100);
+  saveButton.size(200,170);
   saveButton.style('font-size','36px','background-color',col);
-  saveButton.position(windowWidth - saveButton.width - 100, windowHeight * 1/30);
+  saveButton.position(windowWidth - saveButton.width - 100, 30);
 
   resetButton = createButton('RESET');
   resetButton.size(200,100);
@@ -176,8 +167,8 @@ function draw() {
   // moreButton.size(300,150);
   // moreButton.position(windowWidth - 300 - 50,windowHeight-180);
 
+// switch paintings to frames
   if(switchStatus) {
-
     imgFrameOne.show();
     imgFrameTwo.show();
     imgFrameThree.show();
@@ -208,9 +199,7 @@ function draw() {
   }
 
 
-
-
-  // click next
+  // click save
   frameButton.mousePressed(switchFrame);
   cancelButton.mousePressed(openLinkTwo);
   resetButton.mousePressed(reset);
@@ -228,25 +217,19 @@ function draw() {
     text("Successfully Saved",windowWidth * 1/2 - 300,750);
     image(imgSave,windowWidth * 1/2 - 200,800,400,380);
 
-
-
-    // fill(150);
-    // textSize(36);
-    // text("BACK TO DESIGN",windowWidth * 1/2 - 300,1300)
     
     fill(0);
 
-    backToDesignButton = createButton('BACK TO DESIGN');
+    backToDesignButton = createButton('Back to Design');
     backToDesignButton.size(400,100);
     backToDesignButton.style('font-size','36px','background-color',col);
     backToDesignButton.position(windowWidth *1/2 -400, 1200);
 
-    goHistoryButton = createButton('GO TO HISTORY');
-    goHistoryButton.size(400,100);
-    goHistoryButton.style('font-size','36px','background-color',col);
-    goHistoryButton.position(windowWidth *1/2 , 1200);
-    goHistoryButton.mousePressed(openLinkHistory);
-    // text("GO TO HISTORY")
+    goDisplayButton = createButton('Go to Display');
+    goDisplayButton.size(400,100);
+    goDisplayButton.style('font-size','36px','background-color',col);
+    goDisplayButton.position(windowWidth *1/2 , 1200);
+    goDisplayButton.mousePressed(openLinkDisplay);
   }
 
 }
@@ -258,8 +241,9 @@ function openLinkTwo() {
   window.open("indexPageMain.html","_self")
 }
 
-function openLinkHistory() {
-  window.open('indexPageHistory.html','_self')
+function openLinkDisplay() {
+  window.open('indexPageDisplay.html','_self');
+  console.log('test');
 }
 
 
@@ -293,9 +277,8 @@ function switchFrame() {
   console.log("switch success")
 }
 
+//fitFrameOne
 function frameOneNow() {
-
-
   frameOne.locX = imgX+offset;
   frameOne.locY = imgY+offset;
   frameOne.w= 240*ratio;
@@ -312,7 +295,7 @@ function frameOneNow() {
   frameThree.h = 180;
 }
 
-
+// fitFrameTwo
 function frameTwoNow() {
   frameTwo.locX = imgX+offset;
   frameTwo.locY = imgY+offset;
@@ -331,6 +314,7 @@ function frameTwoNow() {
   frameThree.h = 180;
 }
 
+// fit frameThree
 function frameThreeNow() {
   frameThree.locX = imgX+offset;
   frameThree.locY = imgY+offset;
@@ -354,22 +338,3 @@ function popUp() {
   console.log("test")
 
 }
-
-
-
-
-
-
-  // bottom navi
-  // fill(255);
-  // noStroke();
-  // rect(0,windowHeight-200,windowWidth,200);
-  // image(imgHome,50,windowHeight-150,80,80);
-  // image(imgPic,windowWidth * 1/2 - 40,windowHeight-150,80,80);
-  // image(imgBox,windowWidth-50-80,windowHeight-150,80,80);
-
-
-
-    // image(imgFrameOne,160,windowHeight-400,120,160);
-    // image(imgFrameTwo,windowWidth * 1/2 - 40,windowHeight-400,120,160);
-    // image(imgFrameThree,windowWidth -120 -160,windowHeight-400,120,160);
