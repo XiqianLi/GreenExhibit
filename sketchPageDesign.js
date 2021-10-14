@@ -202,7 +202,7 @@ function draw() {
   frameButton.mousePressed(switchFrame);
   cancelButton.mousePressed(openLinkTwo);
   resetButton.mousePressed(reset);
-  saveButton.mouseClicked(popUp);
+  saveButton.touchStarted(popUp);
 
   if(popUpActive) {
     imgFrameOne.hide();
