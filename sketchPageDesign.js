@@ -262,6 +262,7 @@ function openLinkDisplay() {
 
 
 // drag img
+// use a varible to determine if clicking on the image
 function mouseClicked() {
   if (mouseX>imgX && mouseX<imgX+120 && mouseY>imgY && mouseY<imgY+160) {
     active = true;
@@ -279,6 +280,7 @@ function mouseDragged() {
   image(imgPicTwo,imgX,imgY,240,360);
 }
 
+// enlarge image
 function mouseReleased() {
   if (active) {
     imgW = 360;

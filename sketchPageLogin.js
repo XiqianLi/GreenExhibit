@@ -41,6 +41,10 @@ function setup() {
   loginButton.style('background-color',col);
   loginButton.position(windowWidth * 1/2 - loginButton.width / 2, 1300);
   loginButton.mousePressed(openLink);
+
+
+  fill(226,162,28)
+  text("Sign Up",windowWidth * 1/2 - 100, windowHeight-200)
 }
 
 
